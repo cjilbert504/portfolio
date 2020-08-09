@@ -20,7 +20,7 @@ const ContactForm = () => {
                             <label>Message</label>
                             <textarea placeholder="Message"></textarea>
                         </div>
-                    <div class="ui submit button">Submit</div>
+                    <div className="ui submit button">Submit</div>
                 </div>
             </div>
         </ContentSegment>
