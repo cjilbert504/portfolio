@@ -32,9 +32,19 @@ class Blog extends React.Component {
 
     render() {
         return (
-            <ContentSegment>
-                {this.renderBlogPosts()}
-            </ContentSegment>
+            <div>
+                <ContentSegment>
+                    {this.renderBlogPosts()}
+                </ContentSegment>
+                <br /><br /><br /><br /><br />
+                <ContentSegment>
+                    {this.renderBlogPosts()}
+                </ContentSegment>
+                <br /><br /><br /><br /><br />
+                <ContentSegment>
+                    {this.renderBlogPosts()}
+                </ContentSegment>
+            </div>
         )
     }
 };
