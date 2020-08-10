@@ -2,9 +2,14 @@ import React from 'react';
 import ContentSegment from '../ContentSegment';
 
 const Home = () => {
-    return <ContentSegment text={placeholderText} />
+    return (
+        <ContentSegment>
+            <h1 style={{ textAlign: "center" }}>About Me</h1>
+            <p style={{ textAlign: "center" }}>{aboutBodyText}</p>
+        </ContentSegment> 
+    )
 };
 
 export default Home;
 
-const placeholderText = "This information that will be here should be general info about myself, where should it come from? Perhaps as local component state, but perhaps from the database?, I am not sure yet!"
+const aboutBodyText = "Web Developer. Drummer. Father. Lover of all things Ruby. "

@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Redux / ReduxForm for contact form
+ - Manages all input field state
+
+## Redux Thunk for async fetches
+
+## Action Mailer for receiving contact form email submissions

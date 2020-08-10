@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './containers/Home';
 import Contact from './containers/Contact';
-import Blog from './containers/Blog';
+import BlogListContainer from './containers/BlogListContainer';
 import pic from './collin.jpeg';
 
 
@@ -17,7 +17,7 @@ const App = () => {
                     <img alt="profile" src={pic} className="ui circular image" style={{ width: "200px", height: "200px", marginTop: "-40px", marginLeft: "12px"}} />
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" exact component={Contact} />
-                    <Route path="/blog" exact component={Blog} />
+                    <Route path="/blog" exact component={BlogListContainer} />
                 </div>
             </BrowserRouter>
         </div>

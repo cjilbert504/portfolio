@@ -2,7 +2,7 @@ import React from 'react';
 import ContentSegment from '../ContentSegment';
 import railsAPI from '../../apis/railsAPI';
 
-class Blog extends React.Component {
+class BlogListContainer extends React.Component {
     state = {
         blogPosts: []
     };
@@ -13,9 +13,7 @@ class Blog extends React.Component {
 
     onPageRender = async () => {
         const response = await railsAPI.get("/blog_posts")
-        console.log(response.data);
         this.setState({ blogPosts: response.data })
-        // console.log(this.state.blogPosts);
     };
 
     renderBlogPosts = () => {
@@ -42,4 +40,4 @@ class Blog extends React.Component {
     }
 };
 
-export default Blog;
+export default BlogListContainer;
