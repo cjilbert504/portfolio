@@ -13,37 +13,30 @@ class Blog extends React.Component {
 
     onPageRender = async () => {
         const response = await railsAPI.get("/blog_posts")
+        console.log(response.data);
         this.setState({ blogPosts: response.data })
-        console.log(this.state.blogPosts);
+        // console.log(this.state.blogPosts);
     };
 
     renderBlogPosts = () => {
         return this.state.blogPosts.map(blog => (
             <div key={blog.id}>
-                <div>
-                    <h1>{blog.title}</h1>
-                </div>
-                <div>
-                    {blog.content}
-                </div>
+                <ContentSegment>
+                    <div>
+                        <h1>{blog.title}</h1>
+                    </div>
+                    <div>
+                        {blog.content}
+                    </div>
+                </ContentSegment>
             </div>
         ))
     };
 
     render() {
         return (
-            <div>
-                <ContentSegment>
-                    {this.renderBlogPosts()}
-                </ContentSegment>
-                <br /><br /><br /><br /><br />
-                <ContentSegment>
-                    {this.renderBlogPosts()}
-                </ContentSegment>
-                <br /><br /><br /><br /><br />
-                <ContentSegment>
-                    {this.renderBlogPosts()}
-                </ContentSegment>
+            <div> 
+                {this.renderBlogPosts()}
             </div>
         )
     }
