@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import pic from './collin.jpeg';
 
 const Navbar = (props) => {
     return (
-        <div className="ui container">
-            <div className="ui fixed pointing large menu">
-                <Link to="/" className="header item">Collin Jilbert</Link>
-                <Link to="/" className="item">Home</Link>
-                <Link to="/blog" className="item">Blog</Link>
-                <Link to="/projects" className="item">Projects</Link>
-                <Link to="/resume" className="item">Resume</Link>
-                <Link to="/contact" className="item">Contact</Link>
+        <div className="ui container" style={{ marginTop: "10px" }} >
+            <div className="ui pointing tiny menu" style={{ borderStyle: "none", boxShadow: "none"}}>
+                <Link to="/" className="item"><h4>Home</h4></Link>
+                <Link to="/blog" className="item"><h4>Blog</h4></Link>
+                <Link to="/projects" className="item"><h4>Projects</h4></Link>
+                <Link to="/resume" className="item"><h4>Resume</h4></Link>
+                <Link to="/contact" className="item"><h4>Contact</h4></Link>
+                <Link to="/testimonials" className="item"><h4>Testimonials</h4></Link>
                 <div className="right menu">
                     <a href="https://github.com/cjilbert504" className="right floated item">
                         <i className="github icon"></i>
