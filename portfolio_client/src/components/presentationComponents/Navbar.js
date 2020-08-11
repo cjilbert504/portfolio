@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     return (
-        <div className="ui container" style={{ marginTop: "10px" }} >
+        <div className="ui container" style={{ marginTop: "10px", width: "1000px" }} >
             <div className="ui pointing tiny menu" style={{ borderStyle: "none", boxShadow: "none"}}>
                 <Link to="/" className="item"><h4>Home</h4></Link>
                 <Link to="/blog" className="item"><h4>Blog</h4></Link>

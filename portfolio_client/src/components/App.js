@@ -14,7 +14,7 @@ const App = () => {
             <BrowserRouter>
                 <div>
                     <Navbar />
-                    <img alt="profile" src={pic} className="ui circular image" style={{ width: "200px", height: "200px", marginTop: "-40px", marginLeft: "12px"}} />
+                    <img alt="profile" src={pic} className="ui circular image" style={{ width: "150px", height: "150px", marginTop: "-40px", marginLeft: "12px"}} />
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" exact component={Contact} />
                     <Route path="/blog" exact component={BlogListContainer} />
