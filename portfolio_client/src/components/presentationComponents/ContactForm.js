@@ -9,8 +9,8 @@ const ContactForm = () => {
         <ContentSegment>
             <div className="ui inverted form">
                 <div className="two fields">
-                    <Input className="required field" labelText="First Name" placeholder="First Name"  />
-                    <Input className="required field" labelText="Last Name" placeholder="Last Name" />
+                    <Input className="required field" labelText="Full Name" placeholder="Full Name"  />
+                    <Input className="required field" labelText="Email" placeholder="Email" />
                 </div>
                 <TextArea className="required field" labelText="Message" placeholder="Message" />
                 <Button className="ui submit button" buttonText="Submit" />
