@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentSegment from '../ContentSegment';
+import ContentSegment from '../compositionComponents/ContentSegment';
 import railsAPI from '../../apis/railsAPI';
 
 class BlogListContainer extends React.Component {
