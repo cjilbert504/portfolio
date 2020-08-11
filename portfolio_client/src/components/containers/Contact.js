@@ -9,7 +9,6 @@ class Contact extends React.Component {
             email: formData.email,
             message: formData.message
         })
-        .then(response => console.log(response));
     };
 
     render() {
