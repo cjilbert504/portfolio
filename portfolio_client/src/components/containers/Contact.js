@@ -1,13 +1,25 @@
 import React from 'react';
+import railsAPI from '../../apis/railsAPI';
 import ContactForm from '../presentationComponents/ContactForm';
 
-const Contact = () => {
-    return (
-        <div>
-            <h1 style={{ textAlign: "center" }}>Feel Free To Reach Out!</h1>
-            <ContactForm />
-        </div>
-    )
+class Contact extends React.Component {
+    onFormSubmit = (formData) => {
+        railsAPI.post('/contacts', {
+            full_name: formData.name,
+            email: formData.email,
+            message: formData.message
+        })
+        .then(response => console.log(response));
+    };
+
+    render() {
+        return (
+            <div>
+                <h1 style={{ textAlign: "center" }}>Feel Free To Reach Out!</h1>
+                <ContactForm onSubmit={this.onFormSubmit} />
+            </div>
+        )
+    }
 };
 
 export default Contact;
