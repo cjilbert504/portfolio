@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentSegment from '../compositionComponents/ContentSegment';
 import railsAPI from '../../apis/railsAPI';
+import BlogPost from '../presentationComponents/BlogPost';
 
 class BlogListContainer extends React.Component {
     state = {
@@ -20,12 +21,7 @@ class BlogListContainer extends React.Component {
         return this.state.blogPosts.map(blog => (
             <div key={blog.id}>
                 <ContentSegment>
-                    <div>
-                        <h1>{blog.title}</h1>
-                    </div>
-                    <div>
-                        {blog.content}
-                    </div>
+                    <BlogPost title={blog.title} content={blog.content} />
                 </ContentSegment>
             </div>
         ))
