@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentSegment from '../ContentSegment';
+import ContentSegment from '../compositionComponents/ContentSegment';
 
 const Home = () => {
     return (
