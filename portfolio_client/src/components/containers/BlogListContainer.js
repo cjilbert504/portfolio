@@ -1,30 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { fetchBlogs } from '../../actions';
 import ContentSegment from '../compositionComponents/ContentSegment';
-import railsAPI from '../../apis/railsAPI';
 import BlogPost from '../presentationComponents/BlogPost';
 
 class BlogListContainer extends React.Component {
-    state = {
-        blogPosts: []
-    };
 
     componentDidMount() {
-        this.onPageRender();
-    };
-
-    onPageRender = async () => {
-        const response = await railsAPI.get("/blog_posts")
-        this.setState({ blogPosts: response.data })
+        this.props.fetchBlogs();
     };
 
     renderBlogPosts = () => {
-        return this.state.blogPosts.map(blog => (
-            <div key={blog.id}>
-                <ContentSegment>
-                    <BlogPost title={blog.title} content={blog.content} />
-                </ContentSegment>
-            </div>
-        ))
+        return this.props.blogs.map(blog => {
+            return (
+                <div key={blog.id}>
+                    <ContentSegment>
+                        <BlogPost title={blog.title} content={blog.content} />
+                    </ContentSegment>
+                </div>
+            )
+        });
     };
 
     render() {
@@ -36,4 +32,8 @@ class BlogListContainer extends React.Component {
     }
 };
 
-export default BlogListContainer;
+const mapStateToProps = (state) => {
+    return { blogs: state.blogs }
+}
+
+export default connect(mapStateToProps, { fetchBlogs })(BlogListContainer);
