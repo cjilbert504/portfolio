@@ -17,7 +17,7 @@ const App = () => {
                     <img alt="profile" src={pic} className="ui circular image" style={{ width: "150px", height: "150px", marginTop: "-40px", marginLeft: "12px"}} />
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" exact component={Contact} />
-                    <Route path="/blog" exact component={BlogListContainer} />
+                    <Route path="/blogs" exact component={BlogListContainer} />
                 </div>
             </BrowserRouter>
         </div>

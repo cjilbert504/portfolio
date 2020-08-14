@@ -6,7 +6,7 @@ const Navbar = (props) => {
         <div className="ui container" style={{ marginTop: "10px", width: "1000px" }} >
             <div className="ui pointing tiny menu" style={{ borderStyle: "none", boxShadow: "none"}}>
                 <Link to="/" className="item"><h4>Home</h4></Link>
-                <Link to="/blog" className="item"><h4>Blog</h4></Link>
+                <Link to="/blogs" className="item"><h4>Blog</h4></Link>
                 <Link to="/projects" className="item"><h4>Projects</h4></Link>
                 <Link to="/resume" className="item"><h4>Resume</h4></Link>
                 <Link to="/contact" className="item"><h4>Contact</h4></Link>
