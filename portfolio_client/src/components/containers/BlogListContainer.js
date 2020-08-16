@@ -25,7 +25,7 @@ class BlogListContainer extends React.Component {
 
     render() {
         return (
-            <div> 
+            <div className="ui relaxed divided list"> 
                 {this.renderBlogPosts()}
             </div>
         )
