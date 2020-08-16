@@ -6,7 +6,7 @@ import Home from './containers/Home';
 import Contact from './containers/Contact';
 import BlogListContainer from './containers/BlogListContainer';
 import pic from './collin.jpeg';
-
+import BlogsNew from './containers/BlogsNew';
 
 const App = () => {
     return (
@@ -18,6 +18,7 @@ const App = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" exact component={Contact} />
                     <Route path="/blogs" exact component={BlogListContainer} />
+                    <Route path="/blogs/new" exact component={BlogsNew}  />
                 </div>
             </BrowserRouter>
         </div>
