@@ -1,8 +1,7 @@
 import React from 'react';
 import ContentSegment from '../compositionComponents/ContentSegment';
-// import Input from '../compositionComponents/Input';
-// import TextArea from '../compositionComponents/TextArea';
-// import Button from '../compositionComponents/Button';
+import Input from '../compositionComponents/Input';
+import Button from '../compositionComponents/Button';
 
 class ContactForm extends React.Component {
     state = {
@@ -21,6 +20,11 @@ class ContactForm extends React.Component {
         event.preventDefault();
 
         this.props.onSubmit(this.state);
+        this.setState({
+            name: "",
+            email: "",
+            message: ""
+        })
     }
 
     render() {
@@ -29,20 +33,12 @@ class ContactForm extends React.Component {
                 <form onSubmit={this.onFormSubmit}>
                     <div className="ui inverted form">
                         <div className="two fields">
-                            <div  className="field">
-                                <label>Full Name</label>
-                                <input onChange={this.onInputChange} value={this.state.name} type="text" name="name" />
-                            </div>
-                            <div  className="field">
-                                <label>Email</label>
-                                <input onChange={this.onInputChange} value={this.state.email} type="text" name="email" />
-                            </div>
+                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Full Name" type="text" name="name" value={this.state.name} />
+                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Email" type="text" name="email" value={this.state.email} />
                         </div>
-                        <div className="field">
-                            <label>Message</label>
-                            <textarea onChange={this.onInputChange} value={this.state.message} name="message" />
-                        </div>
-                        <div onClick={this.onFormSubmit} className="ui submit button">Submit</div>
+                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Message" type="textarea" name="message" value={this.state.message} />
+                        {/* <div onClick={this.onFormSubmit} className="ui submit button">Submit</div> */}
+                        <Button className="ui submit button" buttonText="Submit" onClick={(event) => this.onFormSubmit(event)} />
                     </div>
                 </form>
             </ContentSegment>
