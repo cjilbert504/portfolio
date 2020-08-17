@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentSegment from '../compositionComponents/ContentSegment';
-import Input from '../compositionComponents/Input';
-import Button from '../compositionComponents/Button';
+import ContentSegment from './ContentSegment';
+import Input from './Input';
+import Button from './Button';
 
 class ContactForm extends React.Component {
     state = {
@@ -33,11 +33,11 @@ class ContactForm extends React.Component {
                 <form onSubmit={this.onFormSubmit}>
                     <div className="ui inverted form">
                         <div className="two fields">
-                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Full Name" type="text" name="name" value={this.state.name} />
-                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Email" type="text" name="email" value={this.state.email} />
+                            <Input className="field" onChange={this.onInputChange} labelText="Full Name" type="text" name="name" value={this.state.name} />
+                            <Input className="field" onChange={this.onInputChange} labelText="Email" type="text" name="email" value={this.state.email} />
                         </div>
-                            <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Message" type="textarea" name="message" value={this.state.message} />
-                            <Button className="ui submit button" buttonText="Submit" onClick={(event) => this.onFormSubmit(event)} />
+                            <Input className="field" onChange={this.onInputChange} labelText="Message" type="textarea" name="message" value={this.state.message} />
+                            <Button className="ui submit button" buttonText="Submit" onClick={this.onFormSubmit} />
                     </div>
                 </form>
             </ContentSegment>

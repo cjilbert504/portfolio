@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchBlogs } from '../../actions';
-import ContentSegment from '../compositionComponents/ContentSegment';
+import ContentSegment from '../presentationComponents/ContentSegment';
 import BlogPost from '../presentationComponents/BlogPost';
 
 class BlogListContainer extends React.Component {
