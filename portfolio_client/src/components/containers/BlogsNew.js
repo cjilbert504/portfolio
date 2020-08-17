@@ -13,7 +13,6 @@ class BlogsNew extends React.Component {
     onFormSubmit = (event) => {
         event.preventDefault();
 
-        console.log(this.state);
         this.setState({
             title: "",
             content: ""
@@ -35,8 +34,8 @@ class BlogsNew extends React.Component {
                             <Input name="title" value={this.state.title} className="field" type="text" labelText="Title" onChange={(event) => this.onInputChange(event)} />
                         </div>
                             <Input name="content" value={this.state.content} className="field" type="textarea" labelText="Content" onChange={(event) => this.onInputChange(event)} />
-                        <div onClick={(event) => this.onFormSubmit(event)}>
-                            <Button className="ui submit button" buttonText="Publish" />
+                        <div>
+                            <Button className="ui submit button" buttonText="Publish" onClick={(event) => this.onFormSubmit(event)} />
                         </div>
                     </div>
                 </form>                                      

@@ -37,8 +37,7 @@ class ContactForm extends React.Component {
                             <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Email" type="text" name="email" value={this.state.email} />
                         </div>
                             <Input className="field" onChange={(event) => this.onInputChange(event)} labelText="Message" type="textarea" name="message" value={this.state.message} />
-                        {/* <div onClick={this.onFormSubmit} className="ui submit button">Submit</div> */}
-                        <Button className="ui submit button" buttonText="Submit" onClick={(event) => this.onFormSubmit(event)} />
+                            <Button className="ui submit button" buttonText="Submit" onClick={(event) => this.onFormSubmit(event)} />
                     </div>
                 </form>
             </ContentSegment>
