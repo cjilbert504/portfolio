@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import ContentSegment from '../presentationComponents/ContentSegment';
 import Input from '../presentationComponents/Input';
 import Button from '../presentationComponents/Button';
+import { addBlog } from '../../actions';
 
 class BlogsNew extends React.Component {
     state = {
@@ -12,6 +14,11 @@ class BlogsNew extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
+
+        this.props.addBlog(this.state, () => {
+            this.props.history.push("/blogs");
+        });
+        
 
         this.setState({
             title: "",
@@ -44,5 +51,6 @@ class BlogsNew extends React.Component {
     };
 };
 
-export default BlogsNew;
+export default connect(null, { addBlog })(BlogsNew);
 
+ 

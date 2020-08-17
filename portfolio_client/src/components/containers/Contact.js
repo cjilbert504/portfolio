@@ -1,6 +1,6 @@
 import React from 'react';
 import railsAPI from '../../apis/railsAPI';
-import ContactForm from '../presentationComponents/ContactForm';
+import ContactForm from './ContactForm';
 
 class Contact extends React.Component {
     onFormSubmit = (formData) => {

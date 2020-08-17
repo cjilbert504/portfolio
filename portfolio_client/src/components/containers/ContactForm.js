@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentSegment from './ContentSegment';
-import Input from './Input';
-import Button from './Button';
+import ContentSegment from '../presentationComponents/ContentSegment';
+import Input from '../presentationComponents/Input';
+import Button from '../presentationComponents/Button';
 
 class ContactForm extends React.Component {
     state = {
