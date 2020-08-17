@@ -1,9 +1,6 @@
 import React from 'react';
 
 const Input = (props) => {
-    // const onInputChange = (event) => {
-    //     props.onChange(event);
-    // };
 
     if (props.type === "textarea") {
         return (

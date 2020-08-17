@@ -10,7 +10,6 @@ const Navbar = (props) => {
                 <Link to="/projects" className="item"><h4>Projects</h4></Link>
                 <Link to="/resume" className="item"><h4>Resume</h4></Link>
                 <Link to="/contact" className="item"><h4>Contact</h4></Link>
-                {/* <Link to="/testimonials" className="item"><h4>Testimonials</h4></Link> */}
                 <div className="right menu">
                     <a href="https://github.com/cjilbert504" className="right floated item">
                         <i className="github icon"></i>

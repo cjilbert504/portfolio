@@ -12,7 +12,6 @@ class BlogsNew extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
 
         this.setState({
             title: "",
@@ -21,7 +20,6 @@ class BlogsNew extends React.Component {
     };
 
     onInputChange = (event) => {
-        console.log(event.target.value);
         this.setState({
             [event.target.name]: event.target.value
         })
