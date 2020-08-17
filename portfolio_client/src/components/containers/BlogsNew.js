@@ -1,15 +1,29 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
 
 import ContentSegment from '../compositionComponents/ContentSegment';
 import Input from '../compositionComponents/Input';
 import Button from '../compositionComponents/Button';
 
 class BlogsNew extends React.Component {
-    renderField(field) {
-        return (
-            <Input className={field.className} labelText={field.label} type={field.type} {...field.input} />
-        )
+    state = {
+        title: "",
+        content: ""
+    }
+
+    onFormSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(this.state);
+        this.setState({
+            title: "",
+            content: ""
+        })
+    };
+
+    onInputChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     };
 
     render() {
@@ -18,10 +32,12 @@ class BlogsNew extends React.Component {
                 <form>
                     <div className="ui inverted form">
                         <div className="one field">
-                            <Field name="title" label="Title" className="field" type="text" component={this.renderField} />
+                            <Input name="title" value={this.state.title} className="field" type="text" labelText="Title" onChange={(event) => this.onInputChange(event)} />
                         </div>
-                            <Field name="content" label="Content" className="field" type="textarea" component={this.renderField} />
-                        <Button className="ui submit button" buttonText="Save this blog post!" />
+                            <Input name="content" value={this.state.content} className="field" type="textarea" labelText="Content" onChange={(event) => this.onInputChange(event)} />
+                        <div onClick={(event) => this.onFormSubmit(event)}>
+                            <Button className="ui submit button" buttonText="Publish" />
+                        </div>
                     </div>
                 </form>                                      
             </ContentSegment>
@@ -29,7 +45,5 @@ class BlogsNew extends React.Component {
     };
 };
 
-export default reduxForm({
-    form: "BlogsNewForm"
-})(BlogsNew);
+export default BlogsNew;
 
