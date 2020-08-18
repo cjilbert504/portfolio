@@ -32,8 +32,8 @@ class BlogListContainer extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    return { blogs: state.blogs }
+const mapStateToProps = ({ blogs }) => {
+    return { blogs }
 }
 
 export default connect(mapStateToProps, { fetchBlogs })(BlogListContainer);
